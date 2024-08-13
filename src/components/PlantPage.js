@@ -31,11 +31,19 @@ function PlantPage() {
       });
   };
 
+  const onPlantDelete = () => {
+    fetch("http://localhost:6001/plants")
+      .then((r) => r.json())
+      .then((data) => {
+        setPlants(data);
+      });
+  };
+
   return (
     <main>
       <NewPlantForm onFormSubmit={onFormSubmit} />
       <Search onSearchChange={onSearchChange} />
-      <PlantList plants={plants} />
+      <PlantList plants={plants} onPlantDelete={onPlantDelete} />
     </main>
   );
 }
