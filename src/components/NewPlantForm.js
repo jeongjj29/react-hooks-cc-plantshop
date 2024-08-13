@@ -16,7 +16,7 @@ function NewPlantForm({ onFormSubmit }) {
 
     fetch("http://localhost:6001/plants", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "Application/JSON" },
       body: JSON.stringify(formData),
     })
       .then((r) => r.json())

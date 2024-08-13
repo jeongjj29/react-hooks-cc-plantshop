@@ -4,9 +4,8 @@ function Search({ onSearchChange }) {
   const [searchKey, setSearchKey] = useState("");
 
   const handleInputChange = (e) => {
-    const newSearchKey = e.target.value.toLowerCase();
-    setSearchKey(newSearchKey);
-    onSearchChange(newSearchKey);
+    setSearchKey(e.target.value);
+    onSearchChange(e.target.value);
   };
 
   return (
